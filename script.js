@@ -173,18 +173,27 @@ document.querySelectorAll('.cta-btn').forEach(btn => {
 });
 
 // Añadir efecto de escritura al título del hero
-function typeWriter(element, text, speed = 100) {
-    let i = 0;
+function typeWriterHTML(element, speed = 50) {
+    const html = element.innerHTML;
     element.innerHTML = '';
-    
+
+    let i = 0;
+    let isTag = false;
+    let text = '';
+  
     function type() {
-        if (i < text.length) {
-            element.innerHTML += text.charAt(i);
-            i++;
-            setTimeout(type, speed);
+        const char = html[i++];
+        if (char === '<') isTag = true;
+        if (char === '>') isTag = false;
+
+        text += char;
+        element.innerHTML = text;
+
+        if (i < html.length) {
+            setTimeout(type, isTag ? 0 : speed);
         }
     }
-    
+
     type();
 }
 
@@ -192,9 +201,9 @@ function typeWriter(element, text, speed = 100) {
 document.addEventListener('DOMContentLoaded', function() {
     const heroTitle = document.querySelector('.hero-title');
     if (heroTitle) {
-        const originalText = heroTitle.textContent;
+        const originalHTML = heroTitle.innerHTML;
         setTimeout(() => {
-            typeWriter(heroTitle, originalText, 50);
+            typeWriterHTML(heroTitle, 50);
         }, 1000);
     }
 });
