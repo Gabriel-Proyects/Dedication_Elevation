@@ -826,7 +826,69 @@
             }
         }
 
+        @media (max-width: 400px) {
+            .hero-title {
+                font-size: 1.6rem;
+                text-align: center;
+            }
+
+            .btn-lg {
+                padding: 8px 16px;
+                font-size: 0.85rem;
+            }
+
+            .transformation-img,
+            .client-image {
+                height: 200px;
+            }
+
+            .section-title {
+                font-size: 1.6rem;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .hero-subtitle {
+                font-size: 1rem;
+                text-align: center;
+            }
+
+            .navbar-brand .brand-text {
+                display: none;
+            }
+
+            .method-card,
+            .testimonial-card {
+                padding: 1.5rem;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .transformation-card {
+                max-width: 90%;
+            }
+        }
         
+
+        @media (max-width: 700px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .hero-section {
+                padding-top: 90px; /* para evitar solapamiento con navbar */
+            }
+
+            .arrow-container {
+                transform: rotate(90deg);
+            }
+
+            .video-testimonial-card iframe {
+                height: 180px;
+            }
+        }
 
         /* Smooth scrolling */
         html {
