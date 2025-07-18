@@ -872,7 +872,7 @@
         }
         
 
-        @media (max-width: 700px) {
+        @media (max-width: 912px) {
             .hero-title {
                 font-size: 2rem;
             }
@@ -889,6 +889,107 @@
                 height: 180px;
             }
         }
+
+        @media (min-width: 412px) and (max-width: 499px) {
+            .hero-title {
+                font-size: 1.6rem;
+            }
+
+            .btn-lg {
+                font-size: 0.85rem;
+                padding: 8px 18px;
+            }
+
+            .transformation-img,
+            .client-image {
+                height: 200px;
+            }
+
+            .nav-link {
+                font-size: 0.9rem;
+            }
+
+            .video-testimonial-card iframe {
+                height: 170px;
+            }
+        }
+
+        @media (min-width: 540px) and (max-width: 599px) {
+            .hero-title {
+                font-size: 1.8rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .transformation-card {
+                max-width: 85%;
+            }
+
+            .cta-btn {
+                font-size: 0.9rem;
+                padding: 10px 22px;
+            }
+
+            .video-testimonial-card iframe {
+                height: 180px;
+            }
+        }
+
+        @media (min-width: 700px) and (max-width: 799px) {
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .hero-title {
+                font-size: 2.3rem;
+            }
+
+            .before-after-container {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .transformation-card {
+                max-width: 75%;
+            }
+
+            .method-card,
+            .testimonial-card {
+                padding: 2rem;
+            }
+
+            .video-testimonial-card iframe {
+                height: 220px;
+            }
+        }
+
+        @media (min-width: 812px) and (max-width: 899px) {
+            .section-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-title {
+                font-size: 2.6rem;
+            }
+
+            .transformation-img,
+            .client-image {
+                height: 300px;
+            }
+
+            .btn-lg {
+                font-size: 1rem;
+                padding: 12px 28px;
+            }
+
+            .video-testimonial-card iframe {
+                height: 240px;
+            }
+        }
+
+        
 
         /* Smooth scrolling */
         html {
