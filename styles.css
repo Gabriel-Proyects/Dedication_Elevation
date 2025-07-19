@@ -313,11 +313,9 @@
 
         .before-after-container {
             display: flex;
-            flex-wrap: wrap; /* Esto permite que las imágenes se acomoden en columna si no caben en fila */
-            gap: 0.5rem;
+            flex-wrap: wrap;
             justify-content: center;
-            width: 100%;
-            box-sizing: border-box;
+            gap: 0rem;
         }
 
         .transformation-card {
@@ -444,15 +442,6 @@
             transition: all 0.3s ease;
             border: 1px solid rgba(63, 211, 255, 0.1);
             height: 100%;
-        }
-
-        .testimonial-card img,
-            .transformation-card img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            object-fit: cover;
-            border-radius: 8px;
         }
 
         .testimonial-card:hover {
@@ -1008,18 +997,13 @@
             }
         }
 
-        @media (max-width: 600px) {
-            .before-after-container {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .transformation-img {
-                width: 100%;
+        @media (max-width: 599px) {
+            .transformation-img img{
+                width: 550px;
             }
         }
 
-        
+
 
         /* Smooth scrolling */
         html {
