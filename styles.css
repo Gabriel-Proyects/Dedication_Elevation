@@ -891,6 +891,8 @@
                 max-width: 85px;
                 display: inline-block !important;
             }
+
+            
         }
 
         @media (max-width: 992px) {
@@ -932,7 +934,7 @@
 
             .client-image,
             .transformation-img {
-                height: 200px;
+                height: 400px;
             }
 
             .section-title {
@@ -975,7 +977,8 @@
 
             .transformation-img,
             .client-image {
-                height: 200px;
+                height: 400px;
+                width: 900px;
             }
 
             .nav-link {
@@ -1309,6 +1312,155 @@
             .testimonial-text {
                 line-height: 1.7;
                 margin-top: 1rem;
+            }
+        }
+
+        /* Resetear las reglas anteriores y usar un enfoque diferente */
+        @media (max-width: 991px) {
+            .client-image {
+                width: 100%;
+                max-width: 320px;
+                height: auto; /* Altura automática */
+                margin: 0 auto 1rem;
+                overflow: hidden;
+                border: 3px solid var(--primary-color);
+                position: relative;
+                border-radius: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            .client-image img {
+                width: 100%;
+                height: auto; /* Altura automática basada en el aspecto real de la imagen */
+                object-fit: cover; /* Volver a cover pero con altura automática */
+                object-position: center;
+                display: block;
+                max-height: none; /* Sin restricción de altura máxima */
+            }
+        }
+
+        /* Dispositivos móviles grandes (768px - 576px) */
+        @media (max-width: 768px) {
+            .client-image {
+                max-width: 280px;
+            }
+        }
+
+        /* Dispositivos móviles medianos (576px y menos) */
+        @media (max-width: 576px) {
+            .client-image {
+                max-width: 260px;
+            }
+        }
+
+        /* Dispositivos móviles pequeños (480px y menos) */
+        @media (max-width: 480px) {
+            .client-image {
+                max-width: 240px;
+            }
+        }
+
+        /* Dispositivos muy pequeños (400px y menos) */
+        @media (max-width: 400px) {
+            .client-image {
+                max-width: 220px;
+            }
+        }
+
+        /* Aplicar lo mismo para las imágenes de transformación */
+        @media (max-width: 768px) {
+            .transformation-img {
+                width: 300px;
+                height: auto; /* Altura automática */
+                margin: 0 auto 1rem;
+                overflow: hidden;
+                border: 3px solid var(--primary-color);
+                position: relative;
+                border-radius: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            .image-placeholder img {
+                width: 100%;
+                height: auto; /* Altura automática */
+                object-fit: cover;
+                transition: transform 0.3s ease;
+                display: block;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .transformation-img {
+                width: 260px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .transformation-img {
+                width: 240px;
+            }
+        }
+
+        /* Ajustar las tarjetas para que se adapten al contenido dinámico */
+        @media (max-width: 768px) {
+            .testimonial-card {
+                padding: 2rem 1.5rem;
+                min-height: auto; /* Sin altura mínima fija */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            /* Asegurar espaciado consistente */
+            .client-name {
+                margin-top: 1rem;
+                margin-bottom: 0.5rem;
+            }
+            
+            .client-age {
+                margin-bottom: 1rem;
+            }
+            
+            .testimonial-text {
+                margin-top: 0;
+                flex-grow: 1;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .testimonial-card {
+                padding: 1.8rem 1.3rem;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .testimonial-card {
+                padding: 1.5rem 1rem;
+            }
+        }
+
+        /* Alternativa: Si las imágenes siguen teniendo espacios, usar esta solución más agresiva */
+        @media (max-width: 768px) {
+            .client-image-alternative {
+                width: 100%;
+                max-width: 280px;
+                margin: 0 auto 1rem;
+                border: 3px solid var(--primary-color);
+                border-radius: 15px;
+                overflow: hidden;
+                position: relative;
+            }
+            
+            .client-image-alternative img {
+                width: 100%;
+                height: auto;
+                display: block;
+                object-fit: contain;
+                background: var(--bg-card); /* Fondo que coincida con la tarjeta en lugar de blanco */
             }
         }
 
